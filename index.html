@@ -10,53 +10,139 @@
     <script src="bower_components/paperkit-min/paperkit.js"></script>
 </head>
 
-<body md-color="grey-200">
+<body md-layout md-color="grey-200">
     <md-sidemenu>
-        <md-list md-action="ajax: md-content">
-            <md-tile md-ajax="page/progress/index.html">
+        <md-list md-action="custom: handleMenu">
+            <md-tile md-ajax="page/main.html">
                 <md-text>Actividades</md-text>
             </md-tile>
-            <md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
+            <md-tile>
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Barranquismo</md-text>
             </md-tile>
-            <md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
+            <md-tile>
+                <md-icon md-image="icon:chevron_right"></md-icon>
+                <md-text>Piragüismo</md-text>
+            </md-tile>
+            <md-tile>
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Espeleología</md-text>
             </md-tile>
-            <md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
-                <md-icon md-image="icon:chevron_right"></md-icon>
-                <md-text>Piragüas</md-text>
-            </md-tile>
-            <md-tile md-ajax="page/tricks/index.html" md-ajax-callback="state.tricks.index">
+            <md-tile>
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Paintball</md-text>
             </md-tile>
             <md-tile>
-                <md-text>Packs y ofertas</md-text>
+                <md-text>Packs</md-text>
             </md-tile>
             <md-tile>
                 <md-text>Conócenos</md-text>
             </md-tile>
         </md-list>
     </md-sidemenu>
-    <md-toolbar md-color="black" md-fill="white">
-        <md-row>
+    <md-toolbar class="main" md-color="black" md-fill="white" md-font-color="white">
+        <md-row class="first">
             <md-icon-button md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
-            <md-tabbar>
+            <md-tabbar md-pager="mainPager">
                 <md-tab>Actividades</md-tab>
-                <md-tab>Packs y ofertas</md-tab>
+                <md-tab>Packs</md-tab>
                 <md-tab>Conócenos</md-tab>
             </md-tabbar>
             <md-space></md-space>
-            <md-icon-button md-image="icon"
+            <md-icon-button md-image="icon:twitter"></md-icon-button>
+            <md-icon-button md-image="icon:facebook"></md-icon-button>
+            <md-icon-button md-image="icon:google-plus"></md-icon-button>
+            <md-icon-button md-image="icon:whatsapp"></md-icon-button>
+            <md-text id="tlf" md-typo="title"><a style="color: white; text-decoration: none;" href="tel:+34629942294">629942294</a></md-text>
+        </md-row>
+        <md-row class="second" md-type="mini">
+            <md-space></md-space>
+            <md-tabbar md-pager="mainPager">
+                <md-tab>Actividades</md-tab>
+                <md-tab>Packs</md-tab>
+                <md-tab>Conócenos</md-tab>
+            </md-tabbar>
+            <md-space></md-space>
         </md-row>
     </md-toolbar>
     <md-content>
+        <md-pager id="mainPager" md-color="red">
+            <md-page>
+                <div id="banner">
+                    <video src="resources/bg.mp4" autoplay no-controls loop></video>
+                    <img src="resources/logo.png">
+                </div>
+                <div id="aventuras">
+                    <md-toolbar class="only-mobile" md-color="red">
+                        <md-row md-type="standard">
+                            <md-icon md-image="icon: directions_walk"></md-icon>
+                            <md-text>Nuestras actividades</md-text>
+                        </md-row>
+                    </md-toolbar>
+                    <div class="aventura" md-color="yellow">
+                        <md-layout>
+                            <md-content>
+                                <img src="resources/barra.jpg">
+                            </md-content>
+                            <md-toolbar class="title" md-color="yellow">
+                                <md-row md-type="standard">
+                                    <md-text>Barranquismo</md-text>
+                                </md-row>
+                            </md-toolbar>
+                        </md-layout>
+                    </div>
+                    <div class="aventura" md-color="orange">
+                        <md-layout>
+                            <md-content>
+                                <img src="resources/pira.jpg">
+                            </md-content>
+                            <md-toolbar class="title" md-color="orange">
+                                <md-row md-type="standard">
+                                    <md-text>Piragüismo</md-text>
+                                </md-row>
+                            </md-toolbar>
+                        </md-layout>
+                    </div>
+                    <div class="aventura" md-color="brown">
+                        <md-layout>
+                            <md-content>
+                                <img src="resources/espe.jpg">
+                            </md-content>
+                            <md-toolbar class="title" md-color="brown">
+                                <md-row md-type="standard">
+                                    <md-text>Espeleología</md-text>
+                                </md-row>
+                            </md-toolbar>
+                        </md-layout>
+                    </div>
+                    <div class="aventura" md-color="brown">
+                        <md-layout>
+                            <md-content>
+                                <img src="resources/espe.jpg">
+                            </md-content>
+                            <md-toolbar class="title" md-color="brown">
+                                <md-row md-type="standard">
+                                    <md-text>Espeleología</md-text>
+                                </md-row>
+                            </md-toolbar>
+                        </md-layout>
+                    </div>
+                </div>
+                <div id="trust">
+                    <div class="left">
+                        <p class="title">Garantía blablabla</p>
+                        <p class="content">Lorem fistrum está la cosa muy malar la caidita sit amet qué dise usteer sexuarl. Tiene musho peligro ut mamaar ullamco quietooor officia eiusmod tiene musho peligro ad por la gloria de mi madre se calle ustée. Ex cillum benemeritaar ut hasta luego Lucas consequat aliquip no te digo trigo por no llamarte Rodrigor fistro magna ullamco. Caballo blanco caballo negroorl te va a hasé pupitaa ex dolore enim esse nostrud ese pedazo de laboris ut. Me cago en tus muelas ex esse minim llevame al sircoo. Al ataquerl elit jarl duis. Me cago en tus muelas me cago en tus muelas no te digo trigo por no llamarte Rodrigor llevame al sircoo ut va usté muy cargadoo laboris aliquip labore magna.</p>
+                    </div>
+                    <div class="right only-desktop"></div>
+                </div>
+            </md-page>
+            <md-page>
+            </md-page>
+            <md-page>
+            </md-page>
+        </md-pager>
     </md-content>
-
-    <script src="script.js"></script>
-    <script src="js/state.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
