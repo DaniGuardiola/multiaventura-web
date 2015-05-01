@@ -1,13 +1,15 @@
 var md = new Paperkit();
+var sliderPage = false;
 window.addEventListener('load', function() {
     md.init();
+    sliderAuto();
     md.sidemenu.querySelector("md-list:first-child").click();
     window.firstTabbar = md.toolbar.querySelector("md-row.first md-tabbar");
     window.secondTabbar = md.toolbar.querySelector("md-row.second md-tabbar");
     window.addEventListener("resize:end", function() {
         if (isMobile() && !secondTabbar.daniInit) {
-        	secondTabbar.daniInit = true;
-        	secondTabbar.alreadyInitialized = false;
+            secondTabbar.daniInit = true;
+            secondTabbar.alreadyInitialized = false;
             secondTabbar.style.width = "";
             [].forEach.call(secondTabbar.querySelectorAll("md-tab"), function(tab) {
                 tab.style.flex = "";
@@ -17,8 +19,8 @@ window.addEventListener('load', function() {
             console.log("HI THERE");
         } else if (!firstTabbar.daniInit) {
             firstTabbar.style.width = "";
-        	firstTabbar.daniInit = true;
-        	firstTabbar.alreadyInitialized = false;
+            firstTabbar.daniInit = true;
+            firstTabbar.alreadyInitialized = false;
             [].forEach.call(firstTabbar.querySelectorAll("md-tab"), function(tab) {
                 tab.style.flex = "";
             });
@@ -29,13 +31,33 @@ window.addEventListener('load', function() {
     });
 
 
-    [].forEach.call(document.querySelectorAll(".aventura"), function(aventura){
-    	aventura.addEventListener("click", function(e){
-    		var el = e.currentTarget;
-    		transition.morph(el);
-    	});
+    [].forEach.call(document.querySelectorAll(".activity"), function(aventura) {
+        aventura.addEventListener("click", function(e) {
+            var el = e.currentTarget;
+            transition.morph(el);
+        });
     });
 });
+
+function sliderAuto() {
+    setTimeout(sliderAuto, 3000);
+    if (sliderPage === false) {
+        sliderPage = 0;
+        return;
+    }
+    var slider = document.querySelector("#main-slider");
+    var sliderTabs = document.querySelector("#main-slider-tabs");
+    slider.moveToPage(sliderPage);
+    sliderTabs.moveIndicatorToTab(sliderPage);
+    sliderPage++;
+    if (sliderPage > 3) {
+        sliderPage = 0;
+    }
+}
+
+function handleSliderTabs(tab, n) {
+    sliderPage = n;
+}
 
 
 // Resize end event
