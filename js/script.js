@@ -1,6 +1,5 @@
 var md = new Paperkit();
 var sliderPage = false;
-md.init();
 window.addEventListener('load', function() {
     var isFirefox = (navigator.userAgent.toLowerCase().indexOf('firefox') > -1);
     var mobileAgent = (typeof window.orientation !== "undefined") ||
@@ -10,6 +9,8 @@ window.addEventListener('load', function() {
             link.removeAttribute("href");
         });
     }
+
+    md.init();
     document.querySelector("md-fab").addEventListener("click", function() {
         if (isFirefox) {
             return false;
