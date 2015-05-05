@@ -37,8 +37,9 @@ window.addEventListener('load', function() {
 
     function activityClick(event) {
         var el = event.currentTarget;
-        var wrapper = document.querySelector("#activities .activities-wrapper");
-        var rect = wrapper.getBoundingClientRect();
+        var activity = document.querySelector("#activities .activities-wrapper .activity");
+        var rect = activity.getBoundingClientRect();
+        var height = isMobile() ? getViewport().height - 32 : 600;
 
         md.greylayer.show();
         md.greylayer.addEventListener("click", greylayerActivityClick);
@@ -46,7 +47,7 @@ window.addEventListener('load', function() {
         var morphHelper = document.createElement("div");
         morphHelper.id = "morph-helper";
         morphHelper.style.opacity = "0";
-        morphHelper.style.height = "600px";
+        morphHelper.style.height = height + "px";
         morphHelper.style.width = rect.width + "px";
         morphHelper.style.backgroundColor = "white";
         morphHelper.style.position = "fixed";
