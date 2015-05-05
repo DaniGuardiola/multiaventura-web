@@ -1,7 +1,7 @@
 var md = new Paperkit();
 var sliderPage = false;
+md.init();
 window.addEventListener('load', function() {
-    md.init();
     sliderAuto();
     md.sidemenu.querySelector("md-list:first-child").click();
     window.firstTabbar = md.toolbar.querySelector("md-row.first md-tabbar");
