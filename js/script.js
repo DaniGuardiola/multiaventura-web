@@ -50,7 +50,7 @@ window.addEventListener('load', function() {
         morphHelper.id = "morph-helper";
         morphHelper.style.opacity = "0";
         morphHelper.style.height = height + "px";
-        morphHelper.style.width = rect.width + "px";
+        morphHelper.style.width = isMobile() ? rect.width + "px" : "1000px";
         morphHelper.style.backgroundColor = "white";
         morphHelper.style.position = "fixed";
         morphHelper.style.top = "50%";
