@@ -2,7 +2,18 @@ var md = new Paperkit();
 var sliderPage = false;
 md.init();
 window.addEventListener('load', function() {
+    var isFirefox = (navigator.userAgent.toLowerCase().indexOf('firefox') > -1);
+    var mobileAgent = (typeof window.orientation !== "undefined") ||
+        (navigator.userAgent.indexOf('IEMobile') !== -1);
+    if (isFirefox && !mobileAgent) {
+        [].forEach.call(document.querySelectorAll('a[href^="tel:"]'), function(link) {
+            link.removeAttribute("href");
+        });
+    }
     document.querySelector("md-fab").addEventListener("click", function() {
+        if (isFirefox) {
+            return false;
+        }
         window.open("tel:666666666", "_self");
     });
     sliderAuto();
