@@ -13,13 +13,8 @@ md-toolbar.main md-row.first md-tabbar {
     margin-right: 12px;
 }
 
-#slider {
-    height: 448px;
-    overflow: hidden;
-}
-
 #logo {
-    width: 258px;
+    width: 128px;
     z-index: 1;
     top: 16px;
     right: 16px;
@@ -36,8 +31,13 @@ md-toolbar.main md-row.first md-tabbar {
     position: absolute;
 }
 
+#slider {
+    height: 200px;
+    overflow: hidden;
+}
+
 #main-slider {
-    height: 448px;
+    height: 200px;
     position: relative;
 }
 
@@ -77,17 +77,17 @@ md-toolbar.main md-row.first md-tabbar {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 16px;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1216px;
+    width: 100%;
+    padding-bottom: 8px;
 }
 
 #activities>.activities-wrapper>.activity {
     height: 340px;
     position: relative;
-    width: 600px;
-    margin-bottom: 16px;
+    width: 100%;
+    margin: 8px 8px 0 8px;
     border-radius: 2px;
     overflow: hidden;
     cursor: pointer;
@@ -134,10 +134,45 @@ md-toolbar.main md-row.first md-tabbar {
     text-align: justify;
 }
 
+#trust>.right>img {
+    margin-top: 8px;
+    width: 256px;
+    max-width: 80%;
+}
+
+@media only screen and (min-width: 1235px) {
+    #activities>.activities-wrapper {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 1216px;
+    }
+    #activities>.activities-wrapper>.activity {
+        height: 340px;
+        position: relative;
+        width: 600px;
+        margin: 0 auto 8px auto;
+        border-radius: 2px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: box-shadow 0.25s;
+    }
+}
+
 @media only screen and (min-width: 768px) {
-    #trust>.right>img {
-        margin-top: 36px;
-        width: 184px;
+    #logo {
+        width: 258px;
+    }
+    #slider {
+        height: 448px;
+        overflow: hidden;
+    }
+    #main-slider {
+        height: 448px;
+        position: relative;
     }
     md-toolbar.main md-row.first md-tabbar {
         display: flex;

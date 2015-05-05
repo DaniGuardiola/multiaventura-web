@@ -32,11 +32,43 @@ window.addEventListener('load', function() {
 
 
     [].forEach.call(document.querySelectorAll(".activity"), function(aventura) {
-        aventura.addEventListener("click", function(e) {
-            var el = e.currentTarget;
-            transition.morph(el);
-        });
+        aventura.addEventListener("click", activityClick);
     });
+
+    function activityClick(event) {
+        var el = event.currentTarget;
+        var wrapper = document.querySelector("#activities .activities-wrapper");
+        var rect = wrapper.getBoundingClientRect();
+
+        md.greylayer.show();
+        md.greylayer.addEventListener("click", greylayerActivityClick);
+
+        var morphHelper = document.createElement("div");
+        morphHelper.id = "morph-helper";
+        morphHelper.style.opacity = "0";
+        morphHelper.style.height = "600px";
+        morphHelper.style.width = rect.width + "px";
+        morphHelper.style.backgroundColor = "white";
+        morphHelper.style.position = "fixed";
+        morphHelper.style.top = "50%";
+        morphHelper.style.left = "50%";
+        morphHelper.style.transform = "translate(-50%, -50%)";
+        document.body.appendChild(morphHelper);
+
+        transition.morph(el, morphHelper, activityMorphCallback);
+    }
+
+    function greylayerActivityClick(event) {
+        md.greylayer.removeEventListener("click", greylayerActivityClick);
+        transition.morphBack(false, function() {
+            md.greylayer.hide();
+        });
+    }
+
+    function activityMorphCallback() {
+        var morphHelper = document.getElementById("morph-helper");
+        morphHelper.parentNode.removeChild(morphHelper);
+    }
 });
 
 function sliderAuto() {
