@@ -47,7 +47,8 @@ md-toolbar.main md-row.first md-tabbar {
     bottom: 16px;
     left: 50%;
     transform: translate(-50%);
-    border-radius: 24px;
+    overflow: hidden;
+    border-radius: 0 50px 0 50px;
     overflow: hidden;
 }
 
@@ -140,6 +141,28 @@ md-toolbar.main md-row.first md-tabbar {
     max-width: 80%;
 }
 
+@media only screen and (min-width: 1000px) {
+    #activities>.activities-wrapper {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #activities>.activities-wrapper>.activity {
+        height: 340px;
+        position: relative;
+        max-width: 49%;
+        margin: 0 auto 8px auto;
+        border-radius: 2px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: box-shadow 0.25s;
+    }
+}
+
 @media only screen and (min-width: 1235px) {
     #activities>.activities-wrapper {
         display: flex;
@@ -188,5 +211,15 @@ md-toolbar.main md-row.first md-tabbar {
     }
     #trust {
         display: flex;
+    }
+    md-toolbar.main md-row.first md-tabbar #selector {
+        bottom: -8px;
+    }
+    md-toolbar.main,
+    md-toolbar.main>* {
+        height: 64px;
+    }
+    md-toolbar.main>*>* {
+        margin-top: 8px;
     }
 }
