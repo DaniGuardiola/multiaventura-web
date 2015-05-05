@@ -2,8 +2,10 @@ var md = new Paperkit();
 var sliderPage = false;
 md.init();
 window.addEventListener('load', function() {
+    document.querySelector("md-fab").addEventListener("click", function() {
+        window.open("tel:666666666", "_self");
+    });
     sliderAuto();
-    md.sidemenu.querySelector("md-list:first-child").click();
     window.firstTabbar = md.toolbar.querySelector("md-row.first md-tabbar");
     window.secondTabbar = md.toolbar.querySelector("md-row.second md-tabbar");
     window.addEventListener("resize:end", function() {
