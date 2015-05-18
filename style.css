@@ -48,7 +48,8 @@ md-toolbar.main md-row.first md-tabbar {
     left: 50%;
     transform: translate(-50%);
     overflow: hidden;
-    border-radius: 0 0 24px 24px;
+    border-radius: 5px;
+    height: 5px;
     overflow: hidden;
 }
 
