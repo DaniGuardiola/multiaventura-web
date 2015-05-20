@@ -209,12 +209,16 @@
                             <br />
                             <br />
                             <a href="https://www.google.com/maps/dir//Villalba+de+la+Sierra,+Cuenca,+España/">C&oacute;mo llegar</a></div>
+                        <div class="hidden data-facebook cushycms" title="URL de perfil de Facebook"></div>
+                        <div class="hidden data-twitter cushycms" title="URL de perfil de Twitter"></div>
+                        <div class="hidden data-intagram cushycms" title="URL de perfil de Instagram"></div>
+                        <div class="hidden data-email cushycms" title="Email"></div>
                         <md-toolbar md-color="brown">
                             <md-row md-type="standard">
-                                <md-icon-button md-image="icon: facebook"></md-icon-button>
-                                <md-icon-button md-image="icon: twitter"></md-icon-button>
-                                <md-icon-button md-image="icon: instagram"></md-icon-button>
-                                <md-icon-button md-image="icon: email"></md-icon-button>
+                                <md-icon-button class="replace-facebook" md-image="icon: facebook"></md-icon-button>
+                                <md-icon-button class="replace-twitter" md-image="icon: twitter"></md-icon-button>
+                                <md-icon-button class="replace-intagram" md-image="icon: instagram"></md-icon-button>
+                                <md-icon-button class="replace-email" md-image="icon: email"></md-icon-button>
                                 <md-space></md-space>
                                 <md-text style="margin-right: 16px;">contacto@villaaventura.es</md-text>
                             </md-row>
@@ -233,11 +237,8 @@
                     <script type="text/javascript">
                     function init_map() {
                         var myOptions = {
-                            scrollwheel: false,
-                            zoomControl: false,
-                            navigationControl: false,
-                            mapTypeControl: false,
-                            scaleControl: false,
+                            disableDefaultUI: true,
+                            disableDoubleClickZoom: true,
                             draggable: false,
                             scrollwheel: false,
                             zoom: 16,
@@ -262,7 +263,6 @@
             </md-page>
         </md-pager>
     </md-content>
-    
     <script src="bower_components/paperkit-min/paperkit.js"></script>
     <script src="js/script.js"></script>
 </body>
