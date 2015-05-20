@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Página en mantenimiento!"
+AuthUserFile .htpasswd
+Require valid-user
