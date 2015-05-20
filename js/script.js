@@ -116,6 +116,19 @@ function handleSliderTabs(tab, n) {
     sliderPage = n;
 }
 
+function handleMenu(tile) {
+    md.sidemenu.close();
+
+    var action = tile.getAttribute("data-action");
+    var parameter = tile.getAttribute("data-parameter");
+
+    if (action === "tab") {
+        document.getElementById("main-tabs").moveIndicatorToTab(parameter);
+        document.getElementById("mobile-tabs").moveIndicatorToTab(parameter);
+        document.getElementById("main-pager").moveToPage(parameter);
+    }
+}
+
 
 // Resize end event
 (function(window) {
