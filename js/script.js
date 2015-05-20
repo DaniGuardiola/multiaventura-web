@@ -125,7 +125,9 @@ function handleMenu(tile) {
         document.getElementById("main-tabs").moveIndicatorToTab(parameter);
         document.getElementById("mobile-tabs").moveIndicatorToTab(parameter);
         document.getElementById("main-pager").moveToPage(parameter);
-    }
+    } else if (action === "activity") {
+        document.querySelector("[data-activity=\"" + parameter + "\"").click();
+    };
 }
 
 

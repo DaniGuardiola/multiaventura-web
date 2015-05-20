@@ -217,8 +217,7 @@ md-toolbar.main md-row.first md-tabbar {
     #conocenos-page>img {
         display: block;
         position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
+        transform: translate(0, -25%);
         width: 100%;
     }
     #menu-button {
