@@ -1,4 +1,5 @@
 var md = new Paperkit();
+md.init();
 var sliderPage = false;
 var currentActivity = false;
 window.addEventListener('load', function() {
@@ -10,8 +11,6 @@ window.addEventListener('load', function() {
             link.removeAttribute("href");
         });
     }
-
-    md.init();
     document.querySelector("md-fab").addEventListener("click", function() {
         if (isFirefox) {
             return false;
