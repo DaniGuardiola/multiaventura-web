@@ -1,5 +1,6 @@
 var md = new Paperkit();
 var sliderPage = false;
+var currentActivity = false;
 window.addEventListener('load', function() {
     var isFirefox = (navigator.userAgent.toLowerCase().indexOf('firefox') > -1);
     var mobileAgent = (typeof window.orientation !== "undefined") ||
@@ -50,8 +51,7 @@ window.addEventListener('load', function() {
     });
 
     function activityClick(event) {
-        var el = event.currentTarget;
-        var activity = document.querySelector("#activities .activities-wrapper .activity");
+        var activity = currentActivity = event.currentTarget;
         var rect = activity.getBoundingClientRect();
         var height = isMobile() ? getViewport().height - 32 : 600;
 
@@ -70,21 +70,31 @@ window.addEventListener('load', function() {
         morphHelper.style.transform = "translate(-50%, -50%)";
         document.body.appendChild(morphHelper);
 
-        transition.morph(el, morphHelper, activityMorphCallback);
+        transition.morph(activity, morphHelper, activityMorphCallback);
     }
 
-    function greylayerActivityClick(event) {
-        md.greylayer.removeEventListener("click", greylayerActivityClick);
-        transition.morphBack(false, function() {
-            md.greylayer.hide();
-        });
-    }
-
-    function activityMorphCallback() {
+    function activityMorphCallback(container) {
         var morphHelper = document.getElementById("morph-helper");
+        var template = document.querySelector("div.activity-template").innerHTML;
+        var title = currentActivity.querySelector(".data-title").textContent;
+        var text = currentActivity.querySelector(".data-text").textContent;
+
         morphHelper.parentNode.removeChild(morphHelper);
+
+        container.innerHTML = template;
+        container.querySelector(".replace-title").textContent = title;
+        container.querySelector(".replace-text").textContent = text;
+
+        md.initElement(container);
     }
 });
+
+function greylayerActivityClick(event) {
+    md.greylayer.removeEventListener("click", greylayerActivityClick);
+    transition.morphBack(false, function() {
+        md.greylayer.hide();
+    });
+}
 
 function sliderAuto() {
     setTimeout(sliderAuto, 3000);

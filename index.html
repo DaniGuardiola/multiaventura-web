@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Villaaventura - ¿Qué quieres hacer hoy?</title>
+    <title class="cushycms">Villaaventura - Barranquismo, piragüismo, espeleología y paintball!</title>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
     <link rel="stylesheet" href="bower_components/paperkit-min/paperkit.css">
     <link rel="stylesheet" href="style.css">
@@ -73,10 +73,10 @@
                             <md-toolbar md-color="orange-900">
                                 <md-row md-type="mini">
                                     <md-tabbar md-action="custom: handleSliderTabs" id="main-slider-tabs" md-pager="main-slider">
-                                        <md-tab>Barranquismo</md-tab>
-                                        <md-tab>Piragüismo</md-tab>
-                                        <md-tab>Espeleología</md-tab>
-                                        <md-tab>Paintball</md-tab>
+                                        <md-tab class="cushycms">Barranquismo</md-tab>
+                                        <md-tab class="cushycms">Piragüismo</md-tab>
+                                        <md-tab class="cushycms">Espeleología</md-tab>
+                                        <md-tab class="cushycms">Paintball</md-tab>
                                     </md-tabbar>
                                 </md-row>
                             </md-toolbar>
@@ -96,40 +96,58 @@
                     </md-pager>
                 </div>
                 <div id="activities" md-color="red-900">
+                    <div class="activity-template hidden">
+                        <md-layout>
+                            <md-toolbar md-color="red">
+                                <md-row md-type="standard">
+                                    <md-icon-button md-action="custom: greylayerActivityClick" md-image="icon: close"></md-icon-button>
+                                    <md-text class="replace-title"></md-text>
+                                    <md-space></md-space>
+                                </md-row>
+                            </md-toolbar>
+                            <md-content>
+                                <p class="replace-text"></p>
+                            </md-content>
+                        </md-layout>
+                    </div>
                     <div class="activities-wrapper">
                         <md-paper class="activity" md-shadow="shadow-1">
+                            <div class="cushycms hidden data-text">Barranquismo texto</div>
                             <img src="resources/barra.jpg">
                             <md-toolbar md-color="black">
                                 <md-row md-type="standard">
                                     <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text>Barranquismo</md-text>
+                                    <md-text class="cushycms data-title">Barranquismo</md-text>
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
                         <md-paper class="activity" md-shadow="shadow-1">
+                            <div class="cushycms hidden data-text">Piragüismo texto</div>
                             <img src="resources/pira.jpg">
                             <md-toolbar md-color="black">
                                 <md-row md-type="standard">
                                     <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text>Piragüismo</md-text>
+                                    <md-text class="cushycms data-title">Piragüismo</md-text>
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
                         <md-paper class="activity" md-shadow="shadow-1">
+                            <div class="cushycms hidden data-text">Espeleología texto</div>
                             <img src="resources/espe.jpg">
                             <md-toolbar md-color="black">
                                 <md-row md-type="standard">
                                     <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text>Espeleología</md-text>
+                                    <md-text class="cushycms data-title">Espeleología</md-text>
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
                         <md-paper class="activity" md-shadow="shadow-1">
+                            <div class="cushycms hidden data-text">Paintball texto</div>
                             <img src="resources/paint.jpg">
                             <md-toolbar md-color="black">
                                 <md-row md-type="standard">
                                     <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text>Paintball</md-text>
+                                    <md-text class="cushycms data-title">Paintball</md-text>
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
@@ -138,8 +156,8 @@
                 <div id="trust" md-color="orange-900">
                     <div class="left">
                         <p md-typo="display-1" class="title cushycms">Garantía blablabla</p>
-                        <p class="content cushycms">Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.<br />
-Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.</p>
+                        <p class="content cushycms">Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.
+                            <br /> Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.</p>
                     </div>
                     <div class="right">
                         <img src="resources/logo.png">

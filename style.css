@@ -7,6 +7,10 @@ md-toolbar.main md-row.first md-tabbar {
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+
 #tlf {
     padding-top: 12px;
     margin-left: 4px;
@@ -109,6 +113,11 @@ md-toolbar.main md-row.first md-tabbar {
     position: absolute;
     bottom: 0;
     opacity: 0.5;
+    transition: opacity 0.25s;
+}
+
+#activities>.activities-wrapper>.activity:hover>md-toolbar {
+    opacity: 0.87;
 }
 
 .only-desktop {
