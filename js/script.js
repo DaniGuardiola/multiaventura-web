@@ -76,8 +76,8 @@ window.addEventListener('load', function() {
     function activityMorphCallback(container) {
         var morphHelper = document.getElementById("morph-helper");
         var template = document.querySelector("div.activity-template").innerHTML;
-        var title = currentActivity.querySelector(".data-title").textContent;
-        var text = currentActivity.querySelector(".data-text").textContent;
+        var title = currentActivity.querySelector(".data-title").innerHTML;
+        var text = currentActivity.querySelector(".data-text").innerHTML;
 
         morphHelper.parentNode.removeChild(morphHelper);
 
