@@ -1,4 +1,4 @@
 AuthType Basic
-AuthName "Página en mantenimiento!"
-AuthUserFile .htpasswd
+AuthName "Pagina en mantenimiento!"
+AuthUserFile /var/www/multiaventura/.htpasswd
 Require valid-user
