@@ -1,6 +1,5 @@
 md-tabbar>#selector {
     background-color: white;
-    height: 5px;
 }
 
 md-toolbar.main md-row.first md-tabbar {
@@ -47,12 +46,12 @@ md-toolbar.main md-row.first md-tabbar {
 #activity-menu {
     position: absolute;
     z-index: 1;
-    bottom: 16px;
+    bottom: -8px;
     left: 50%;
     transform: translate(-50%);
     overflow: hidden;
     border-radius: 5px;
-    height: 5px;
+    height: 16px;
     overflow: hidden;
 }
 
@@ -206,6 +205,12 @@ md-toolbar.main md-row.first md-tabbar {
 }
 
 @media only screen and (min-width: 768px) {
+    md-tabbar>#selector {
+        height: 8px;
+    }
+    #activity-menu md-tabbar>#selector {
+        height: 16px;
+    }
     #conocenos-page {
         position: relative;
     }
@@ -227,7 +232,8 @@ md-toolbar.main md-row.first md-tabbar {
     }
     #slider {
         height: 448px;
-        overflow: hidden;
+        overflow: visible;
+        position: relative;
     }
     #main-slider {
         height: 448px;

@@ -16,18 +16,18 @@
             <md-tile data-action="tab" data-parameter="0" md-ajax="page/main.html">
                 <md-text>Actividades</md-text>
             </md-tile>
-            <md-tile>
+            <md-tile data-action="activity" data-parameter="1">
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Barranquismo</md-text>
             </md-tile>
-            <md-tile>
+            <md-tile data-action="activity" data-parameter="2">
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Piragüismo</md-text>
             </md-tile>
-            <md-tile>
+            <md-tile data-action="activity" data-parameter="3">
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Espeleología</md-text>
-            </md-tile>
+            </md-tile data-action="activity" data-parameter="4">
             <md-tile>
                 <md-icon md-image="icon:chevron_right"></md-icon>
                 <md-text>Paintball</md-text>
@@ -67,20 +67,20 @@
         <md-pager id="main-pager">
             <md-page>
                 <div id="slider">
+                    <md-paper id="activity-menu" md-shadow="shadow-1" class="only-desktop">
+                        <md-toolbar md-color="orange-900">
+                            <md-row md-type="mini">
+                                <md-tabbar md-action="custom: handleSliderTabs" id="main-slider-tabs" md-pager="main-slider">
+                                    <md-tab></md-tab>
+                                    <md-tab></md-tab>
+                                    <md-tab></md-tab>
+                                    <md-tab></md-tab>
+                                </md-tabbar>
+                            </md-row>
+                        </md-toolbar>
+                    </md-paper>
                     <md-pager id="main-slider">
                         <img id="logo" src="resources/logo-bg.png">
-                        <md-paper id="activity-menu" md-shadow="shadow-5" class="only-desktop">
-                            <md-toolbar md-color="orange-900">
-                                <md-row md-type="mini">
-                                    <md-tabbar md-action="custom: handleSliderTabs" id="main-slider-tabs" md-pager="main-slider">
-                                        <md-tab>Barranquismo</md-tab>
-                                        <md-tab>Piragüismo</md-tab>
-                                        <md-tab>Espeleología</md-tab>
-                                        <md-tab>Paintball</md-tab>
-                                    </md-tabbar>
-                                </md-row>
-                            </md-toolbar>
-                        </md-paper>
                         <md-page>
                             <img class="cushycms" alt="Foto de slider - barranquismo" src="resources/barra-slider.jpg">
                         </md-page>
@@ -111,7 +111,7 @@
                         </md-layout>
                     </div>
                     <div class="activities-wrapper">
-                        <md-paper class="activity" md-shadow="shadow-1">
+                        <md-paper data-activity="1" class="activity" md-shadow="shadow-1">
                             <div title="Texto de barranquismo" class="cushycms hidden data-text">Descenso del <strong>r&iacute;o J&uacute;car</strong> a su paso por el Parque Natural de la Serran&iacute;a de Cuenca d&oacute;nde&nbsp;podr&aacute;s disfrutar de un paisaje &uacute;nico con sorprendentes formaciones moldeadas por el&nbsp;agua y el viento durante el paso del tiempo, en el recorrido encontrar&aacute;s zonas tan&nbsp;famosas como el <strong>Ventano del Diablo</strong>.
                                 <br />
                                 <br /> En este parque acu&aacute;tico natural te divertir&aacute;s pasando por toboganes, cascadas, corrientes&nbsp;de agua, jacuzzis naturales, saltos.
@@ -127,7 +127,7 @@
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
-                        <md-paper class="activity" md-shadow="shadow-1">
+                        <md-paper data-activity="2" class="activity" md-shadow="shadow-1">
                             <div title="Texto de piragüismo" class="cushycms hidden data-text">Apto para todos los p&uacute;blicos. En ambas opciones un monitor te instruir&aacute; sobre el &nbsp;manejo de la piragua y el equipo acu&aacute;tico necesario.
                                 <br />
                                 <br />
@@ -145,7 +145,7 @@
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
-                        <md-paper class="activity" md-shadow="shadow-1">
+                        <md-paper data-activity="3" class="activity" md-shadow="shadow-1">
                             <div title="Texto de espeleología" class="cushycms hidden data-text">Conoce el incre&iacute;ble universo subterr&aacute;neo que se ha formado en la <strong>Serran&iacute;a de Cuenca</strong>.
                                 <br />
                                 <br /> Disfruta de este paisaje y siente la fuerza de la naturaleza con un equipo especializado que te guiar&aacute; por formaciones rocosas &uacute;nicas y en constante evoluci&oacute;n.
@@ -159,7 +159,7 @@
                                 </md-row>
                             </md-toolbar>
                         </md-paper>
-                        <md-paper class="activity" md-shadow="shadow-1">
+                        <md-paper data-activity="4" class="activity" md-shadow="shadow-1">
                             <div title="Texto de paintball" class="cushycms hidden data-text">Libera adrenalina con <strong>marcadoras de &uacute;ltima generaci&oacute;n</strong> y bolas de colores biodegradables en un campo natural preparado para la acci&oacute;n con casetas, fuertes, fosos&hellip; d&oacute;nde podr&aacute;s realizar diferentes estrategias, poniendo a prueba tu imaginaci&oacute;n &nbsp;y tus capacidades de comunicaci&oacute;n.
                                 <br />
                                 <br /> Te proporcionaremos un completo <strong>equipo de protecci&oacute;n</strong> para que disfrutes al m&aacute;ximo de esta experiencia, s&oacute;lo has de traer calzado c&oacute;modo y ganas de divertirte al aire libre.
