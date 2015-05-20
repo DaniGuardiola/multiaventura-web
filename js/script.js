@@ -82,8 +82,8 @@ window.addEventListener('load', function() {
         morphHelper.parentNode.removeChild(morphHelper);
 
         container.innerHTML = template;
-        container.querySelector(".replace-title").textContent = title;
-        container.querySelector(".replace-text").textContent = text;
+        container.querySelector(".replace-title").innerHTML = title;
+        container.querySelector(".replace-text").innerHTML = text;
 
         md.initElement(container);
     }
