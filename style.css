@@ -280,4 +280,16 @@ md-toolbar.main md-row.first md-tabbar {
         height: 0;
     }
 }
+
+md-space.fix-mobile {
+    display: none;
+}
+
+@media all and (max-width: 470px) {
+    md-space.fix-mobile {
+        display: block;
+    }
+    md-text.fix-mobile {
+        display: none;
+    }
 }

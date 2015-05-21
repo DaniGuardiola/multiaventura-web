@@ -2,271 +2,260 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title title="Título de la página" class="cushycms">Villaaventura - Barranquismo, pirag&uuml;ismo, espeleolog&iacute;a y paintball!</title>
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
-    <link rel="stylesheet" href="bower_components/paperkit-min/paperkit.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title title="Título de la página" class="cushycms">Villaaventura - Barranquismo, pirag&uuml;ismo, espeleolog&iacute;a y paintball!</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="bower_components/paperkit-min/paperkit.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body md-layout md-color="grey-200">
-    <md-sidemenu>
-        <md-list md-action="custom: handleMenu">
-            <md-tile data-action="tab" data-parameter="0" md-ajax="page/main.html">
-                <md-text>Actividades</md-text>
-            </md-tile>
-            <md-tile data-action="activity" data-parameter="1">
-                <md-icon md-image="icon:chevron_right"></md-icon>
-                <md-text>Barranquismo</md-text>
-            </md-tile>
-            <md-tile data-action="activity" data-parameter="2">
-                <md-icon md-image="icon:chevron_right"></md-icon>
-                <md-text>Piragüismo</md-text>
-            </md-tile>
-            <md-tile data-action="activity" data-parameter="3">
-                <md-icon md-image="icon:chevron_right"></md-icon>
-                <md-text>Espeleología</md-text>
-            </md-tile>
-            <md-tile data-action="activity" data-parameter="4">
-                <md-icon md-image="icon:chevron_right"></md-icon>
-                <md-text>Paintball</md-text>
-            </md-tile>
-            <md-tile data-action="tab" data-parameter="1">
-                <md-text>Packs</md-text>
-            </md-tile>
-            <md-tile data-action="tab" data-parameter="2">
-                <md-text>Conócenos</md-text>
-            </md-tile>
-        </md-list>
-    </md-sidemenu>
-    <md-fab md-shadow="shadow-1" md-image="icon: phone" md-fill="white" md-color="green" class="only-mobile"></md-fab>
-    <md-toolbar class="main" md-color="brown-900" md-fill="white" md-font-color="white" md-shadow="shadow-1">
-        <md-row class="first">
-            <md-icon-button id="menu-button" md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
-            <md-tabbar id="main-tabs" md-pager="main-pager">
-                <md-tab>Actividades</md-tab>
-                <md-tab>Packs</md-tab>
-                <md-tab>Conócenos</md-tab>
-            </md-tabbar>
-            <md-space></md-space>
-            <md-icon md-image="icon:whatsapp"></md-icon>
-            <md-text id="tlf" md-typo="title"><a title="Teléfono" class="cushycms" style="color: white; text-decoration: none;" href="tel:+34629942294">629942294</a></md-text>
-        </md-row>
-        <md-row class="second" md-type="mini">
-            <md-space></md-space>
-            <md-tabbar id="mobile-tabs" md-pager="main-pager">
-                <md-tab>Actividades</md-tab>
-                <md-tab>Packs</md-tab>
-                <md-tab>Conócenos</md-tab>
-            </md-tabbar>
-            <md-space></md-space>
-        </md-row>
-    </md-toolbar>
-    <md-content>
-        <md-pager id="main-pager">
+  <md-sidemenu>
+    <md-list md-action="custom: handleMenu">
+      <md-tile data-action="tab" data-parameter="0" md-ajax="page/main.html">
+        <md-text>Actividades</md-text>
+      </md-tile>
+      <md-tile data-action="activity" data-parameter="1">
+        <md-icon md-image="icon:chevron_right"></md-icon>
+        <md-text>Barranquismo</md-text>
+      </md-tile>
+      <md-tile data-action="activity" data-parameter="2">
+        <md-icon md-image="icon:chevron_right"></md-icon>
+        <md-text>Piragüismo</md-text>
+      </md-tile>
+      <md-tile data-action="activity" data-parameter="3">
+        <md-icon md-image="icon:chevron_right"></md-icon>
+        <md-text>Espeleología</md-text>
+      </md-tile>
+      <md-tile data-action="activity" data-parameter="4">
+        <md-icon md-image="icon:chevron_right"></md-icon>
+        <md-text>Paintball</md-text>
+      </md-tile>
+      <md-tile data-action="tab" data-parameter="1">
+        <md-text>Packs</md-text>
+      </md-tile>
+      <md-tile data-action="tab" data-parameter="2">
+        <md-text>Conócenos</md-text>
+      </md-tile>
+    </md-list>
+  </md-sidemenu>
+  <md-fab md-shadow="shadow-1" md-image="icon: phone" md-fill="white" md-color="green" class="only-mobile"></md-fab>
+  <md-toolbar class="main" md-color="brown-900" md-fill="white" md-font-color="white" md-shadow="shadow-1">
+    <md-row class="first">
+      <md-icon-button id="menu-button" md-image="icon:menu" md-action="custom: md.sidemenu.open"></md-icon-button>
+      <md-tabbar id="main-tabs" md-pager="main-pager">
+        <md-tab>Actividades</md-tab>
+        <md-tab>Packs</md-tab>
+        <md-tab>Conócenos</md-tab>
+      </md-tabbar>
+      <md-space></md-space>
+      <md-icon md-image="icon:whatsapp"></md-icon>
+      <md-text id="tlf" md-typo="title"><a title="Teléfono" class="cushycms data-phone" style="color: white; text-decoration: none;" href="tel:+34629942294">629942294</a></md-text>
+    </md-row>
+    <md-row class="second" md-type="mini">
+      <md-space></md-space>
+      <md-tabbar id="mobile-tabs" md-pager="main-pager">
+        <md-tab>Actividades</md-tab>
+        <md-tab>Packs</md-tab>
+        <md-tab>Conócenos</md-tab>
+      </md-tabbar>
+      <md-space></md-space>
+    </md-row>
+  </md-toolbar>
+  <md-content>
+    <md-pager id="main-pager">
+      <md-page>
+        <div id="slider">
+          <md-pager id="main-slider">
+            <img id="logo" src="resources/logo-bg.png">
             <md-page>
-                <div id="slider">
-                    <md-paper id="activity-menu" md-shadow="shadow-1" class="only-desktop">
-                        <md-toolbar md-color="orange-900">
-                            <md-row md-type="mini">
-                                <md-tabbar md-action="custom: handleSliderTabs" id="main-slider-tabs" md-pager="main-slider">
-                                    <md-tab></md-tab>
-                                    <md-tab></md-tab>
-                                    <md-tab></md-tab>
-                                    <md-tab></md-tab>
-                                </md-tabbar>
-                            </md-row>
-                        </md-toolbar>
-                    </md-paper>
-                    <md-pager id="main-slider">
-                        <img id="logo" src="resources/logo-bg.png">
-                        <md-page>
-                            <img class="cushycms" alt="Foto de slider - barranquismo" src="resources/barra-slider.jpg">
-                        </md-page>
-                        <md-page>
-                            <img class="cushycms" alt="Foto de slider - piragüismo" src="resources/pira-slider.jpg">
-                        </md-page>
-                        <md-page>
-                            <img class="cushycms" alt="Foto de slider - espeleología" src="resources/espe-slider.jpg">
-                        </md-page>
-                        <md-page>
-                            <img class="cushycms" alt="Foto de slider - paintball" src="resources/paint-slider.jpg">
-                        </md-page>
-                    </md-pager>
-                </div>
-                <div id="activities" md-color="red-900">
-                    <div class="activity-template hidden">
-                        <md-layout>
-                            <md-toolbar md-color="red-900">
-                                <md-row md-type="standard">
-                                    <md-icon-button md-action="custom: greylayerActivityClick" md-image="icon: close"></md-icon-button>
-                                    <md-text class="replace-title"></md-text>
-                                    <md-space></md-space>
-                                </md-row>
-                            </md-toolbar>
-                            <md-content>
-                                <p class="replace-text"></p>
-                            </md-content>
-                        </md-layout>
-                    </div>
-                    <div class="activities-wrapper">
-                        <md-paper data-activity="1" class="activity" md-shadow="shadow-1">
-                            <div title="Texto de barranquismo" class="cushycms hidden data-text">Descenso del <strong>r&iacute;o J&uacute;car</strong> a su paso por el Parque Natural de la Serran&iacute;a de Cuenca d&oacute;nde&nbsp;podr&aacute;s disfrutar de un paisaje &uacute;nico con sorprendentes formaciones moldeadas por el&nbsp;agua y el viento durante el paso del tiempo, en el recorrido encontrar&aacute;s zonas tan&nbsp;famosas como el <strong>Ventano del Diablo</strong>.
-                                <br />
-                                <br /> En este parque acu&aacute;tico natural te divertir&aacute;s pasando por toboganes, cascadas, corrientes&nbsp;de agua, jacuzzis naturales, saltos.
-                                <br />
-                                <br /> *El recorrido se adapta en funci&oacute;n al nivel de los participantes.
-                                <br /> &nbsp;
-                            </div>
-                            <img class="cushycms" alt="Foto de actividad: barranquismo" src="resources/barra.jpg">
-                            <md-toolbar md-color="black">
-                                <md-row md-type="standard">
-                                    <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text class="data-title">Barranquismo</md-text>
-                                </md-row>
-                            </md-toolbar>
-                        </md-paper>
-                        <md-paper data-activity="2" class="activity" md-shadow="shadow-1">
-                            <div title="Texto de piragüismo" class="cushycms hidden data-text">Apto para todos los p&uacute;blicos. En ambas opciones un monitor te instruir&aacute; sobre el &nbsp;manejo de la piragua y el equipo acu&aacute;tico necesario.
-                                <br />
-                                <br />
-                                <strong>AGUAS TRANQUILAS</strong>
-                                <br /> Recorrido por el <strong>embalse de la Toba</strong>, situado en la Parte Alta del Parque Natural de la Serran&iacute;a de Cuenca. Ideal para relajarse y hacer fotograf&iacute;as en un paisaje espectacular.
-                                <br />
-                                <br />
-                                <strong>R&Aacute;PIDOS DEL RIO J&Uacute;CAR</strong>
-                                <br /> Recorrido por los r&aacute;pidos del <strong>r&iacute;o J&uacute;car</strong>, perfecto para liberar adrenalina y divertirte &nbsp;disfrutando de la velocidad y la ferocidad del r&iacute;o con sus corrientes y toboganes.</div>
-                            <img class="cushycms" alt="Foto de actividad: piragüismo" src="resources/pira.jpg">
-                            <md-toolbar md-color="black">
-                                <md-row md-type="standard">
-                                    <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text class="data-title">Piragüismo</md-text>
-                                </md-row>
-                            </md-toolbar>
-                        </md-paper>
-                        <md-paper data-activity="3" class="activity" md-shadow="shadow-1">
-                            <div title="Texto de espeleología" class="cushycms hidden data-text">Conoce el incre&iacute;ble universo subterr&aacute;neo que se ha formado en la <strong>Serran&iacute;a de Cuenca</strong>.
-                                <br />
-                                <br /> Disfruta de este paisaje y siente la fuerza de la naturaleza con un equipo especializado que te guiar&aacute; por formaciones rocosas &uacute;nicas y en constante evoluci&oacute;n.
-                                <br />
-                                <br /> ​Sum&eacute;rgete en cuevas, desfiladeros, gateras, salas con estalactitas y estalagmitas, lagos &nbsp;subterr&aacute;neos&hellip; que te har&aacute;n creer que est&aacute;s en otro mundo.</div>
-                            <img class="cushycms" alt="Foto de actividad: espeleología" src="resources/espe.jpg">
-                            <md-toolbar md-color="black">
-                                <md-row md-type="standard">
-                                    <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text class="data-title">Espeleología</md-text>
-                                </md-row>
-                            </md-toolbar>
-                        </md-paper>
-                        <md-paper data-activity="4" class="activity" md-shadow="shadow-1">
-                            <div title="Texto de paintball" class="cushycms hidden data-text">Libera adrenalina con <strong>marcadoras de &uacute;ltima generaci&oacute;n</strong> y bolas de colores biodegradables en un campo natural preparado para la acci&oacute;n con casetas, fuertes, fosos&hellip; d&oacute;nde podr&aacute;s realizar diferentes estrategias, poniendo a prueba tu imaginaci&oacute;n &nbsp;y tus capacidades de comunicaci&oacute;n.
-                                <br />
-                                <br /> Te proporcionaremos un completo <strong>equipo de protecci&oacute;n</strong> para que disfrutes al m&aacute;ximo de esta experiencia, s&oacute;lo has de traer calzado c&oacute;modo y ganas de divertirte al aire libre.
-                                <br />
-                                <br /> Ven a vernos con tus amigos/as y&hellip;
-                                <br />
-                                <strong>&iexcl;&iexcl;Que comience la batalla!!</strong></div>
-                            <img class="cushycms" alt="Foto de actividad: paintball" src="resources/paint.jpg">
-                            <md-toolbar md-color="black">
-                                <md-row md-type="standard">
-                                    <md-icon md-image="icon: chevron_right"></md-icon>
-                                    <md-text class="data-title">Paintball</md-text>
-                                </md-row>
-                            </md-toolbar>
-                        </md-paper>
-                    </div>
-                </div>
-                <div id="trust" md-color="brown">
-                    <div class="left">
-                        <p title="Título de garantía" md-typo="display-1" class="title cushycms">Garant&iacute;a blablabla</p>
-                        <p title="Texto de garantía" class="content cushycms">Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.
-                            <br /> Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.</p>
-                    </div>
-                    <div class="right">
-                        <img src="resources/logo.png">
-                        <p md-typo="display-1"><a style="color: white; text-decoration: none;" href="tel:+34629942294">629942294</a></p>
-                    </div>
-                </div>
+              <img class="cushycms" alt="Foto de slider - barranquismo" src="resources/barra-slider.jpg">
             </md-page>
             <md-page>
+              <img class="cushycms" alt="Foto de slider - piragüismo" src="resources/pira-slider.jpg">
             </md-page>
-            <md-page id="conocenos-page">
-                <img title="Imagen de conócenos" class="cushycms" src="resources/conocenos-image.jpg" />
-                <div id="conocenos-section">
-                    <md-paper md-shadow="shadow-1">
-                        <div id="conocenos-text" class="cushycms" title="Texto de conócenos" md-padding>Nos encontramos en <strong>Villalba de la Sierra</strong>, el pueblo que te abre las puertas a la Serran&iacute;a Conquense, donde contamos con una larga tradici&oacute;n de vivir de los recursos naturales que nos presta este paraje, como el <strong>r&iacute;o J&uacute;car</strong>.
-                            <br />
-                            <br /> Desde los primeros gancheros que trasportaban a trav&eacute;s de &eacute;l la madera hasta nuestros d&iacute;as; en los que, con los mejores profesionales, disfrutamos al m&aacute;ximo de este r&iacute;o y de su entorno realizando <strong>descensos de ca&ntilde;ones, espeleolog&iacute;a y escalada</strong>.
-                            <br />
-                            <br /> Nos puedes encontrar en la entrada del pueblo, d&oacute;nde tenemos nuestras instalaciones: piscina con bar-restaurante, sala con el mejor material para los deportes de aventura, vestuarios con duchas individuales, taquillas, etc.
-                            <br />
-                            <br /> Para conocernos mejor s&iacute;guenos en:</div>
-                        <div class="hidden data-facebook cushycms" title="URL de perfil de Facebook"></div>
-                        <div class="hidden data-twitter cushycms" title="URL de perfil de Twitter"></div>
-                        <div class="hidden data-intagram cushycms" title="URL de perfil de Instagram"></div>
-                        <div class="hidden data-email cushycms" title="Email"></div>
-                        <md-toolbar md-color="brown">
-                            <md-row md-type="standard">
-                                <md-icon-button class="replace-facebook" md-image="icon: facebook"></md-icon-button>
-                                <md-icon-button class="replace-twitter" md-image="icon: twitter"></md-icon-button>
-                                <md-icon-button class="replace-intagram" md-image="icon: instagram"></md-icon-button>
-                                <md-icon-button class="replace-email" md-image="icon: email"></md-icon-button>
-                                <md-space></md-space>
-                                <md-text style="margin-right: 16px;">contacto@villaaventura.es</md-text>
-                            </md-row>
-                        </md-toolbar>
-                    </md-paper>
-                </div>
-                <div title="Texto del marcador del mapa" class="cushycms hidden data-marker-text">
-                    <b>Villaaventura</b>
-                    <br /> +34&nbsp;629 94 22 94
-                    <br />
-                    <br /> Calle X N&ordm; Y
-                    <br /> Villalba de la Sierra, Galicia, Espa&ntilde;a
-                    <br />
-                    <br />
-                    <a href="https://www.google.com/maps/dir//Villalba+de+la+Sierra,+Cuenca,+España/">C&oacute;mo llegar</a>
-                </div>
-                <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                <div id="gmap">
-                    <div id="gmap_canvas"></div>
-                    <style>
-                    #gmap_canvas img {
-                        max-width: none!important;
-                        background: none!important
-                    }
-                    </style>
-                    <script type="text/javascript">
-                    function init_map() {
-                        var myOptions = {
-                            disableDefaultUI: true,
-                            disableDoubleClickZoom: true,
-                            draggable: false,
-                            scrollwheel: false,
-                            zoom: 16,
-                            center: new google.maps.LatLng(40.2351588, -2.089811499999996),
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        };
-                        map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-                        marker = new google.maps.Marker({
-                            map: map,
-                            position: new google.maps.LatLng(40.2351588, -2.089811499999996)
-                        });
-                        infowindow = new google.maps.InfoWindow({
-                            content: document.querySelector(".data-marker-text").innerHTML
-                        });
-                        google.maps.event.addListener(marker, "click", function() {
-                            infowindow.open(map, marker);
-                        });
-                        infowindow.open(map, marker);
-                    }
-                    google.maps.event.addDomListener(window, 'load', init_map);
-                    </script>
+            <md-page>
+              <img class="cushycms" alt="Foto de slider - espeleología" src="resources/espe-slider.jpg">
             </md-page>
-        </md-pager>
-    </md-content>
-    <script src="bower_components/paperkit-min/paperkit.js"></script>
-    <script src="js/script.js"></script>
+            <md-page>
+              <img class="cushycms" alt="Foto de slider - paintball" src="resources/paint-slider.jpg">
+            </md-page>
+          </md-pager>
+        </div>
+        <div id="activities" md-color="red-900">
+          <div class="activity-template hidden">
+            <md-layout>
+              <md-toolbar md-color="red-900">
+                <md-row md-type="standard">
+                  <md-icon-button md-action="custom: greylayerActivityClick" md-image="icon: close"></md-icon-button>
+                  <md-text class="replace-title"></md-text>
+                  <md-space></md-space>
+                </md-row>
+              </md-toolbar>
+              <md-content>
+                <p class="replace-text"></p>
+              </md-content>
+            </md-layout>
+          </div>
+          <div class="activities-wrapper">
+            <md-paper data-activity="1" class="activity" md-shadow="shadow-1">
+              <div title="Texto de barranquismo" class="cushycms hidden data-text">Descenso del <strong>r&iacute;o J&uacute;car</strong> a su paso por el Parque Natural de la Serran&iacute;a de Cuenca d&oacute;nde&nbsp;podr&aacute;s disfrutar de un paisaje &uacute;nico con sorprendentes formaciones moldeadas por el&nbsp;agua y el viento durante el paso del tiempo, en el recorrido encontrar&aacute;s zonas tan&nbsp;famosas como el <strong>Ventano del Diablo</strong>.
+                <br />
+                <br /> En este parque acu&aacute;tico natural te divertir&aacute;s pasando por toboganes, cascadas, corrientes&nbsp;de agua, jacuzzis naturales, saltos.
+                <br />
+                <br /> *El recorrido se adapta en funci&oacute;n al nivel de los participantes.
+                <br /> &nbsp;
+              </div>
+              <img class="cushycms" alt="Foto de actividad: barranquismo" src="resources/barra.jpg">
+              <md-toolbar md-color="black">
+                <md-row md-type="standard">
+                  <md-icon md-image="icon: chevron_right"></md-icon>
+                  <md-text class="data-title">Barranquismo</md-text>
+                </md-row>
+              </md-toolbar>
+            </md-paper>
+            <md-paper data-activity="2" class="activity" md-shadow="shadow-1">
+              <div title="Texto de piragüismo" class="cushycms hidden data-text">Apto para todos los p&uacute;blicos. En ambas opciones un monitor te instruir&aacute; sobre el &nbsp;manejo de la piragua y el equipo acu&aacute;tico necesario.
+                <br />
+                <br />
+                <strong>AGUAS TRANQUILAS</strong>
+                <br /> Recorrido por el <strong>embalse de la Toba</strong>, situado en la Parte Alta del Parque Natural de la Serran&iacute;a de Cuenca. Ideal para relajarse y hacer fotograf&iacute;as en un paisaje espectacular.
+                <br />
+                <br />
+                <strong>R&Aacute;PIDOS DEL RIO J&Uacute;CAR</strong>
+                <br /> Recorrido por los r&aacute;pidos del <strong>r&iacute;o J&uacute;car</strong>, perfecto para liberar adrenalina y divertirte &nbsp;disfrutando de la velocidad y la ferocidad del r&iacute;o con sus corrientes y toboganes.</div>
+              <img class="cushycms" alt="Foto de actividad: piragüismo" src="resources/pira.jpg">
+              <md-toolbar md-color="black">
+                <md-row md-type="standard">
+                  <md-icon md-image="icon: chevron_right"></md-icon>
+                  <md-text class="data-title">Piragüismo</md-text>
+                </md-row>
+              </md-toolbar>
+            </md-paper>
+            <md-paper data-activity="3" class="activity" md-shadow="shadow-1">
+              <div title="Texto de espeleología" class="cushycms hidden data-text">Conoce el incre&iacute;ble universo subterr&aacute;neo que se ha formado en la <strong>Serran&iacute;a de Cuenca</strong>.
+                <br />
+                <br /> Disfruta de este paisaje y siente la fuerza de la naturaleza con un equipo especializado que te guiar&aacute; por formaciones rocosas &uacute;nicas y en constante evoluci&oacute;n.
+                <br />
+                <br /> ​Sum&eacute;rgete en cuevas, desfiladeros, gateras, salas con estalactitas y estalagmitas, lagos &nbsp;subterr&aacute;neos&hellip; que te har&aacute;n creer que est&aacute;s en otro mundo.</div>
+              <img class="cushycms" alt="Foto de actividad: espeleología" src="resources/espe.jpg">
+              <md-toolbar md-color="black">
+                <md-row md-type="standard">
+                  <md-icon md-image="icon: chevron_right"></md-icon>
+                  <md-text class="data-title">Espeleología</md-text>
+                </md-row>
+              </md-toolbar>
+            </md-paper>
+            <md-paper data-activity="4" class="activity" md-shadow="shadow-1">
+              <div title="Texto de paintball" class="cushycms hidden data-text">Libera adrenalina con <strong>marcadoras de &uacute;ltima generaci&oacute;n</strong> y bolas de colores biodegradables en un campo natural preparado para la acci&oacute;n con casetas, fuertes, fosos&hellip; d&oacute;nde podr&aacute;s realizar diferentes estrategias, poniendo a prueba tu imaginaci&oacute;n &nbsp;y tus capacidades de comunicaci&oacute;n.
+                <br />
+                <br /> Te proporcionaremos un completo <strong>equipo de protecci&oacute;n</strong> para que disfrutes al m&aacute;ximo de esta experiencia, s&oacute;lo has de traer calzado c&oacute;modo y ganas de divertirte al aire libre.
+                <br />
+                <br /> Ven a vernos con tus amigos/as y&hellip;
+                <br />
+                <strong>&iexcl;&iexcl;Que comience la batalla!!</strong></div>
+              <img class="cushycms" alt="Foto de actividad: paintball" src="resources/paint.jpg">
+              <md-toolbar md-color="black">
+                <md-row md-type="standard">
+                  <md-icon md-image="icon: chevron_right"></md-icon>
+                  <md-text class="data-title">Paintball</md-text>
+                </md-row>
+              </md-toolbar>
+            </md-paper>
+          </div>
+        </div>
+        <div id="trust" md-color="brown">
+          <div class="left">
+            <p title="Título de garantía" md-typo="display-1" class="title cushycms">Garant&iacute;a blablabla</p>
+            <p title="Texto de garantía" class="content cushycms">Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.
+              <br /> Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.&nbsp;Esta p&aacute;gina ha sido editada desde el CMS.</p>
+          </div>
+          <div class="right">
+            <img src="resources/logo.png">
+            <p id="replace-phone-trust" md-typo="display-1"><a style="color: white; text-decoration: none;" href="tel:+34629942294">629942294</a></p>
+          </div>
+        </div>
+      </md-page>
+      <md-page>
+      </md-page>
+      <md-page id="conocenos-page">
+        <img title="Imagen de conócenos" class="cushycms" src="resources/conocenos-image.jpg" />
+        <div id="conocenos-section">
+          <md-paper md-shadow="shadow-1">
+            <div id="conocenos-text" class="cushycms" title="Texto de conócenos" md-padding>Nos encontramos en <strong>Villalba de la Sierra</strong>, el pueblo que te abre las puertas a la Serran&iacute;a Conquense, donde contamos con una larga tradici&oacute;n de vivir de los recursos naturales que nos presta este paraje, como el <strong>r&iacute;o J&uacute;car</strong>.
+              <br />
+              <br /> Desde los primeros gancheros que trasportaban a trav&eacute;s de &eacute;l la madera hasta nuestros d&iacute;as; en los que, con los mejores profesionales, disfrutamos al m&aacute;ximo de este r&iacute;o y de su entorno realizando <strong>descensos de ca&ntilde;ones, espeleolog&iacute;a y escalada</strong>.
+              <br />
+              <br /> Nos puedes encontrar en la entrada del pueblo, d&oacute;nde tenemos nuestras instalaciones: piscina con bar-restaurante, sala con el mejor material para los deportes de aventura, vestuarios con duchas individuales, taquillas, etc.
+              <br />
+              <br /> Para conocernos mejor s&iacute;guenos en:</div>
+            <div class="hidden data-facebook cushycms" title="URL de perfil de Facebook">http://facebook.com</div>
+            <div class="hidden data-twitter cushycms" title="URL de perfil de Twitter">http://twitter.com</div>
+            <div class="hidden data-instagram cushycms" title="URL de perfil de Instagram">http://instagram.com</div>
+            <div class="hidden data-email cushycms" title="Email">mailto:villalbaventura@gmail.com</div>
+            <md-toolbar id="conocenos-social" md-color="brown">
+              <md-row md-type="standard">
+                <md-space class="fix-mobile"></md-space>
+                <md-icon-button md-action="custom: openSocial" data-social="facebook" class="replace-facebook" md-image="icon: facebook"></md-icon-button>
+                <md-icon-button md-action="custom: openSocial" data-social="twitter" class="replace-twitter" md-image="icon: twitter"></md-icon-button>
+                <md-icon-button md-action="custom: openSocial" data-social="instagram" class="replace-intagram" md-image="icon: instagram"></md-icon-button>
+                <md-icon-button md-action="custom: openSocial" data-social="email" class="replace-email" md-image="icon: email"></md-icon-button>
+                <md-space></md-space>
+                <md-text class="fix-mobile" style="margin-right: 16px;">contacto@villaaventura.es</md-text>
+              </md-row>
+            </md-toolbar>
+          </md-paper>
+        </div>
+        <div title="Texto del marcador del mapa" class="cushycms hidden data-marker-text">
+          <b>Villaaventura</b>
+          <br /> +34&nbsp;629 94 22 94
+          <br />
+          <br /> Calle X N&ordm; Y
+          <br /> Villalba de la Sierra, Galicia, Espa&ntilde;a
+          <br />
+          <br />
+          <a href="https://www.google.com/maps/dir//Villalba+de+la+Sierra,+Cuenca,+España/">C&oacute;mo llegar</a>
+        </div>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <div id="gmap">
+          <div id="gmap_canvas"></div>
+          <style>
+          #gmap_canvas img {
+            max-width: none!important;
+            background: none!important
+          }
+          </style>
+          <script type="text/javascript">
+          function initMap() {
+            var myOptions = {
+              disableDefaultUI: true,
+              disableDoubleClickZoom: true,
+              draggable: false,
+              scrollwheel: false,
+              zoom: 16,
+              center: new google.maps.LatLng(40.2351588, -2.089811499999996),
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+            marker = new google.maps.Marker({
+              map: map,
+              position: new google.maps.LatLng(40.2351588, -2.089811499999996)
+            });
+            infowindow = new google.maps.InfoWindow({
+              content: document.querySelector(".data-marker-text").innerHTML
+            });
+            google.maps.event.addListener(marker, "click", function() {
+              infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+          }
+          google.maps.event.addDomListener(window, "load", initMap);
+          </script>
+      </md-page>
+    </md-pager>
+  </md-content>
+  <script src="bower_components/paperkit-min/paperkit.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
