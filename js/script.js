@@ -28,8 +28,17 @@ function sliderAuto() {
 
 function openSocial(button) {
   var social = button.getAttribute("data-social");
-  var url = document.querySelector(".data-" + social).textContent;
-  window.open(url);
+  var text = document.querySelector(".data-" + social).textContent;
+  if (social === "facebook") {
+    text = "http://facebook.com/" + text;
+  } else if (social === "twitter") {
+    text = "http://twitter.com/" + text;
+  } else if (social === "instagram") {
+    text = "http://instagram.com/" + text;
+  } else if (social === "email") {
+    text = "mailto:" + text;
+  }
+  window.open(text);
 }
 
 function handleMenu(tile) {
