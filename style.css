@@ -53,6 +53,7 @@ md-toolbar.main md-row.first md-tabbar {
     border-radius: 5px;
     height: 16px;
     overflow: hidden;
+    display: none;
 }
 
 #activity-menu md-tabbar>#selector {
@@ -273,6 +274,10 @@ md-toolbar.main md-row.first md-tabbar {
         margin-top: 64px;
         width: 768px;
         transform: translate(-50%);
+    }
+    #menu-button {
+        opacity: 0;
+        height: 0;
     }
 }
 }
