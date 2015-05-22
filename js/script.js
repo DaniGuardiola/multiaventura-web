@@ -113,6 +113,8 @@ window.addEventListener("load", function() {
     var template = document.querySelector("div.activity-template").innerHTML;
     var title = currentActivity.querySelector(".data-title").innerHTML;
     var text = currentActivity.querySelector(".data-text").innerHTML;
+    var priceIndividual = currentActivity.querySelector(".data-price-individual").innerHTML;
+    var priceGroup = currentActivity.querySelector(".data-price-group").innerHTML;
     var image = currentActivity.querySelector(".data-image").src;
 
     container.classList.add("activity-popup");
@@ -122,6 +124,8 @@ window.addEventListener("load", function() {
     container.innerHTML = template;
     container.querySelector(".replace-title").innerHTML = title;
     container.querySelector(".replace-text").innerHTML = text;
+    container.querySelector(".replace-price-individual").innerHTML = priceIndividual;
+    container.querySelector(".replace-price-group").innerHTML = priceGroup;
     container.querySelector(".replace-image").src = image;
 
     md.initElement(container);

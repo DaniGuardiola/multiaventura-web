@@ -306,4 +306,10 @@ md-space.fix-mobile {
   md-text.fix-mobile {
     display: none;
   }
+  #md-morph.activity-popup md-toolbar .hide-on-mobile {
+    display: none;
+  }
+  #md-morph.activity-popup md-toolbar .title {
+    font-size: 48px;
+  }
 }
