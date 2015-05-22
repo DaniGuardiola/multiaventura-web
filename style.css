@@ -161,6 +161,14 @@ md-toolbar.main md-row.first md-tabbar {
   width: 100%;
 }
 
+#md-morph.activity-popup md-layout {
+  height: 100%;
+}
+
+#md-morph.activity-popup md-content {
+  flex: 1;
+}
+
 #md-morph.activity-popup md-toolbar {
   overflow: hidden;
 }
