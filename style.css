@@ -161,6 +161,18 @@ md-toolbar.main md-row.first md-tabbar {
   width: 100%;
 }
 
+#md-morph.activity-popup md-toolbar {
+  overflow: hidden;
+}
+
+#md-morph.activity-popup md-toolbar>img {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0.17;
+  z-index: -1;
+}
+
 @media only screen and (min-width: 1000px) {
   #activities {
     height: 568px;

@@ -113,12 +113,16 @@ window.addEventListener("load", function() {
     var template = document.querySelector("div.activity-template").innerHTML;
     var title = currentActivity.querySelector(".data-title").innerHTML;
     var text = currentActivity.querySelector(".data-text").innerHTML;
+    var image = currentActivity.querySelector(".data-image").src;
+
+    container.classList.add("activity-popup");
 
     morphHelper.parentNode.removeChild(morphHelper);
 
     container.innerHTML = template;
     container.querySelector(".replace-title").innerHTML = title;
     container.querySelector(".replace-text").innerHTML = text;
+    container.querySelector(".replace-image").src = image;
 
     md.initElement(container);
   }
