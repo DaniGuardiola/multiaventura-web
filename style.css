@@ -141,13 +141,22 @@ md-toolbar.main md-row.first md-tabbar {
 
 #trust>.left>.content {
   padding: 0 32px 16px 32px;
-  text-align: justify;
+  max-width: 100%;
+  width: 454px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #trust>.right>img {
   margin-top: 8px;
   width: 256px;
   max-width: 80%;
+}
+
+#trust>.right>p {
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 #conocenos-page>img {
