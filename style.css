@@ -167,6 +167,7 @@ md-toolbar.main md-row.first md-tabbar {
 
 #md-morph.activity-popup md-content {
   flex: 1;
+  padding-bottom: 16px;
 }
 
 #md-morph.activity-popup md-toolbar {
