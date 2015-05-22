@@ -279,8 +279,7 @@ md-toolbar.main md-row.first md-tabbar {
     transform: translate(-50%);
   }
   #menu-button {
-    opacity: 0;
-    height: 0;
+    display: none;
   }
 }
 

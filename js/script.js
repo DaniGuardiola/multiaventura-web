@@ -49,10 +49,7 @@ function handleMenu(tile) {
 
   if (action === "tab") {
     document.getElementById("main-tabs").moveIndicatorToTab(parameter);
-    document.getElementById("mobile-tabs").moveIndicatorToTab(parameter);
     document.getElementById("main-pager").moveToPage(parameter);
-  } else if (action === "activity") {
-    document.querySelector("[data-activity=\"" + parameter + "\"").click();
   }
 }
 
@@ -78,30 +75,8 @@ window.addEventListener("load", function() {
     window.open("tel:+34" + phone, "_self");
   });
   sliderAuto();
-  var firstTabbar = md.toolbar.querySelector("md-row.first md-tabbar");
-  var secondTabbar = md.toolbar.querySelector("md-row.second md-tabbar");
   addEventListener("resize:end", function() {
-    if (isMobile() && !secondTabbar.daniInit) {
-      secondTabbar.daniInit = true;
-      secondTabbar.alreadyInitialized = false;
-      secondTabbar.style.width = "";
-      [].forEach.call(secondTabbar.querySelectorAll("md-tab"), function(tab) {
-        tab.style.flex = "";
-      });
-      secondTabbar.initTabBar();
-      secondTabbar.moveIndicatorToTab(0);
-      console.log("HI THERE");
-    } else if (!firstTabbar.daniInit) {
-      firstTabbar.style.width = "";
-      firstTabbar.daniInit = true;
-      firstTabbar.alreadyInitialized = false;
-      [].forEach.call(firstTabbar.querySelectorAll("md-tab"), function(tab) {
-        tab.style.flex = "";
-      });
-      //firstTabbar.initTabBar()
-      firstTabbar.moveIndicatorToTab(0);
-      console.log("HI YO");
-    }
+    
   });
 
 
