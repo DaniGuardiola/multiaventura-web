@@ -19,11 +19,11 @@ function hashChangeListener() {
 
 function mainTabsHandler(tab, n) {
   console.log(n);
-  if (n == 0) {
+  if (n === 0) {
     document.location.hash = "#actividades";
-  } else if (n == 1) {
+  } else if (n === 1) {
     document.location.hash = "#packs";
-  } else if (n == 2) {
+  } else if (n === 2) {
     document.location.hash = "#conocenos";
   }
 }
@@ -32,10 +32,18 @@ md.initListener(hashChangeListener);
 window.addEventListener("hashchange", hashChangeListener);
 md.init();
 
+function firefoxFix() {
+  var isFirefox = (navigator.userAgent.toLowerCase().indexOf("firefox") > -1);
+  if (isFirefox) {
+    md.greylayer.style.zIndex = -1;
+  }
+}
+
 function greylayerActivityClick() {
   md.greylayer.removeEventListener("click", greylayerActivityClick);
   transition.morphBack(false, function() {
     md.greylayer.hide();
+    firefoxFix();
     md.fab.show();
   });
 }
@@ -76,6 +84,7 @@ function handleMenu(tile) {
   var parameter = tile.getAttribute("data-parameter");
 
   if (action === "tab") {
+    mainTabsHandler(false, +parameter);
     document.getElementById("main-tabs").moveIndicatorToTab(parameter);
     document.getElementById("main-pager").moveToPage(parameter);
   }
