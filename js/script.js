@@ -3,12 +3,40 @@ var md = new Paperkit();
 var sliderPage = false;
 var currentActivity = false;
 
+function hashChangeListener() {
+  var hash = document.location.hash;
+  var parameter = 0;
+  if (hash === "#packs") {
+    parameter = 1;
+  } else if (hash === "#conocenos") {
+    parameter = 2;
+  } else if (hash !== "#actividades" && hash !== "#" && hash !== "") {
+    return;
+  }
+  document.getElementById("main-tabs").moveIndicatorToTab(parameter);
+  document.getElementById("main-pager").moveToPage(parameter);
+}
+
+function mainTabsHandler(tab, n) {
+  console.log(n);
+  if (n == 0) {
+    document.location.hash = "#actividades";
+  } else if (n == 1) {
+    document.location.hash = "#packs";
+  } else if (n == 2) {
+    document.location.hash = "#conocenos";
+  }
+}
+
+md.initListener(hashChangeListener);
+window.addEventListener("hashchange", hashChangeListener);
 md.init();
 
 function greylayerActivityClick() {
   md.greylayer.removeEventListener("click", greylayerActivityClick);
   transition.morphBack(false, function() {
     md.greylayer.hide();
+    md.fab.show();
   });
 }
 
@@ -76,7 +104,7 @@ window.addEventListener("load", function() {
   });
   sliderAuto();
   addEventListener("resize:end", function() {
-    
+
   });
 
 
@@ -91,6 +119,7 @@ window.addEventListener("load", function() {
     var height = isMobile() ? getViewport().height - 32 : 600;
 
     md.greylayer.show();
+    md.fab.hide();
     md.greylayer.addEventListener("click", greylayerActivityClick);
 
     var morphHelper = document.createElement("div");
