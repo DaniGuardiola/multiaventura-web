@@ -3,7 +3,9 @@ md-tabbar>#selector {
 }
 
 md-toolbar.main md-row.first md-tabbar {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
 }
 
 .hidden {
@@ -176,7 +178,6 @@ md-toolbar.main md-row.first md-tabbar {
 
 #md-morph.activity-popup md-content {
   flex: 1;
-  padding-bottom: 16px;
   border-radius: 2px;
   display: block;
 }
@@ -204,7 +205,97 @@ md-toolbar.main md-row.first md-tabbar {
   padding-right: 16px;
 }
 
+@media only screen and (min-width: 768px) {
+  #md-morph.activity-popup md-toolbar md-text.hide-on-mobile {
+    display: block;
+  }
+  #morph-helper {
+    width: 760px;
+  }
+  #md-morph.activity-popup md-content .show-on-mobile {
+    display: none;
+  }
+  md-tabbar>#selector {
+    height: 4px;
+  }
+  #activity-menu md-tabbar>#selector {
+    height: 16px;
+  }
+  #conocenos-page {
+    position: relative;
+  }
+  #conocenos-page>img {
+    display: block;
+    position: absolute;
+    transform: translate(0, -25%);
+    width: 100%;
+  }
+  #menu-button {
+    margin: 8px;
+  }
+  #tlf {
+    margin-right: 16px;
+  }
+  #logo {
+    width: 258px;
+  }
+  #slider {
+    height: 448px;
+    overflow: visible;
+    position: relative;
+  }
+  #main-slider {
+    height: 448px;
+    position: relative;
+  }
+  md-toolbar.main md-row.first md-tabbar {
+    display: flex;
+    height: 48px;
+    overflow: visible;
+  }
+  .only-mobile {
+    display: none;
+  }
+  .only-desktop {
+    display: initial;
+  }
+  #trust {
+    display: flex;
+  }
+  md-toolbar.main md-row.first md-tabbar #selector {
+    bottom: -8px;
+  }
+  md-toolbar.main,
+  md-toolbar.main>* {
+    height: 64px;
+  }
+  md-toolbar.main>*>* {
+    margin-top: 8px;
+  }
+  #conocenos-section {
+    height: 280px;
+    position: relative;
+    z-index: 1;
+  }
+  #conocenos-section>md-paper {
+    margin-left: 50%;
+    margin-top: 64px;
+    width: 768px;
+    transform: translate(-50%);
+  }
+  #menu-button {
+    display: none;
+  }
+}
+
+md-space.fix-mobile {
+  display: none;
+}
+
 @media only screen and (min-width: 1000px) {
+  #morph-helper {
+    width: 980px;
+  }
   #activities {
     height: 568px;
   }
@@ -249,91 +340,6 @@ md-toolbar.main md-row.first md-tabbar {
     cursor: pointer;
     transition: box-shadow 0.25s;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  #md-morph.activity-popup md-toolbar md-text.hide-on-mobile {
-    display: block;
-  }
-  #md-morph.activity-popup md-content .show-on-mobile {
-    display: none;
-  }
-  md-tabbar>#selector {
-    height: 8px;
-  }
-  #activity-menu md-tabbar>#selector {
-    height: 16px;
-  }
-  #conocenos-page {
-    position: relative;
-  }
-  #conocenos-page>img {
-    display: block;
-    position: absolute;
-    transform: translate(0, -25%);
-    width: 100%;
-  }
-  #menu-button {
-    margin: 8px;
-  }
-  #tlf {
-    margin-right: 16px;
-  }
-  #logo {
-    width: 258px;
-  }
-  #slider {
-    height: 448px;
-    overflow: visible;
-    position: relative;
-  }
-  #main-slider {
-    height: 448px;
-    position: relative;
-  }
-  md-toolbar.main md-row.first md-tabbar {
-    display: flex;
-  }
-  md-toolbar.main md-row.second {
-    display: none;
-  }
-  .only-mobile {
-    display: none;
-  }
-  .only-desktop {
-    display: initial;
-  }
-  #trust {
-    display: flex;
-  }
-  md-toolbar.main md-row.first md-tabbar #selector {
-    bottom: -8px;
-  }
-  md-toolbar.main,
-  md-toolbar.main>* {
-    height: 64px;
-  }
-  md-toolbar.main>*>* {
-    margin-top: 8px;
-  }
-  #conocenos-section {
-    height: 280px;
-    position: relative;
-    z-index: 1;
-  }
-  #conocenos-section>md-paper {
-    margin-left: 50%;
-    margin-top: 64px;
-    width: 768px;
-    transform: translate(-50%);
-  }
-  #menu-button {
-    display: none;
-  }
-}
-
-md-space.fix-mobile {
-  display: none;
 }
 
 @media all and (max-width: 470px) {
