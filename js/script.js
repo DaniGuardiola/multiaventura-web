@@ -124,8 +124,8 @@ window.addEventListener("load", function() {
     container.innerHTML = template;
     container.querySelector(".replace-title").innerHTML = title;
     container.querySelector(".replace-text").innerHTML = text;
-    container.querySelector(".replace-price-individual").innerHTML = priceIndividual;
-    container.querySelector(".replace-price-group").innerHTML = priceGroup;
+    container.querySelector(".replace-price-individual").innerHTML = container.querySelector(".replace-price-individual-mobile").innerHTML = priceIndividual;
+    container.querySelector(".replace-price-group").innerHTML = container.querySelector(".replace-price-group-mobile").innerHTML = priceGroup;
     container.querySelector(".replace-image").src = image;
 
     md.initElement(container);

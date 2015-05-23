@@ -178,6 +178,7 @@ md-toolbar.main md-row.first md-tabbar {
   flex: 1;
   padding-bottom: 16px;
   border-radius: 2px;
+  display: block;
 }
 
 #md-morph.activity-popup md-toolbar {
@@ -194,6 +195,13 @@ md-toolbar.main md-row.first md-tabbar {
 
 #md-morph.activity-popup md-toolbar md-text.hide-on-mobile {
   display: none;
+}
+
+.price-mobile {
+  margin: 0;
+  text-align: right;
+  padding-top: 16px;
+  padding-right: 16px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -246,6 +254,9 @@ md-toolbar.main md-row.first md-tabbar {
 @media only screen and (min-width: 768px) {
   #md-morph.activity-popup md-toolbar md-text.hide-on-mobile {
     display: block;
+  }
+  #md-morph.activity-popup md-content .show-on-mobile {
+    display: none;
   }
   md-tabbar>#selector {
     height: 8px;
