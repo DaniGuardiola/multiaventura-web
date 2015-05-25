@@ -13,6 +13,7 @@
 
 <body md-layout md-color="grey-200">
   <md-sidemenu>
+    <img src="resources/logo.png" class="logo">
     <md-list md-action="custom: handleMenu">
       <md-tile data-action="tab" data-parameter="0" md-ajax="page/main.html">
         <md-icon md-image="icon: run"></md-icon>
@@ -261,6 +262,11 @@ Deportes de aventura</b>
             infowindow.open(map, marker);
           }
           google.maps.event.addDomListener(window, "load", initMap);
+          google.maps.event.addDomListener(window, "resize", function() {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, "resize");
+            map.setCenter(center);
+          });
           </script>
       </md-page>
 
