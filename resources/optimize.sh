@@ -6,3 +6,4 @@ mogrify -resize 965x99999 paint/*
 mogrify -resize 965x99999 pira/*
 
 mogrify -resize 1400x99999 conocenos/*
+mogrify -resize 1400x99999 slider/*
