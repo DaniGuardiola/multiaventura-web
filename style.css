@@ -189,14 +189,15 @@ md-sidemenu .logo {
 }
 
 #md-morph.activity-popup md-toolbar {
-  overflow: hidden;
+  position: absolute;
+  opacity: 0.87;
 }
 
 #md-morph.activity-popup md-toolbar>img {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
   opacity: 0.17;
+  transform: translate(0, -50%);
   z-index: -1;
 }
 
@@ -204,9 +205,21 @@ md-sidemenu .logo {
   display: none;
 }
 
+#md-morph.activity-popup md-content md-paper.text {
+  position: absolute;
+  margin: 16px;
+  margin-top: 162px;
+  border-radius: 2px;
+}
+
+.photos>img {
+  width: 100%;
+  display: block;
+}
+
 .price-mobile {
   margin: 0;
-  text-align: right;
+  text-align: center;
   padding-top: 16px;
   padding-right: 16px;
 }

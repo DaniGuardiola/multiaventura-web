@@ -50,21 +50,21 @@
   <md-content>
     <md-pager id="main-pager">
 
-      <md-page>
+      <md-page class="actividades-page">
         <div id="slider" md-shadow="shadow-1">
           <md-pager id="main-slider">
             <img id="logo" src="resources/logo-bg.png">
             <md-page>
-              <img class="cushycms" alt="Foto de slider - 1" src="resources/slider-1.jpg">
+              <img class="cushycms" alt="Foto de slider - 1" src="resources/slider/1.jpg">
             </md-page>
             <md-page>
-              <img class="cushycms" alt="Foto de slider - 2" src="resources/slider-2.jpg">
+              <img class="cushycms" alt="Foto de slider - 2" src="resources/slider/2.jpg">
             </md-page>
             <md-page>
-              <img class="cushycms" alt="Foto de slider - 3" src="resources/slider-3.jpg">
+              <img class="cushycms" alt="Foto de slider - 3" src="resources/slider/3.jpg">
             </md-page>
             <md-page>
-              <img class="cushycms" alt="Foto de slider - 4" src="resources/slider-4.jpg">
+              <img class="cushycms" alt="Foto de slider - 4" src="resources/slider/4.jpg">
             </md-page>
           </md-pager>
         </div>
@@ -73,7 +73,6 @@
           <div class="activity-template hidden">
             <md-layout>
               <md-toolbar md-color="red-900">
-                <img src="" class="replace-image">
                 <md-row md-type="standard">
                   <md-icon-button md-action="custom: greylayerActivityClick" md-image="icon: close"></md-icon-button>
                   <md-space></md-space>
@@ -86,10 +85,13 @@
                   <md-text style="margin-right: 32px; line-height: 64px;" md-typo="display-2" class="hide-on-mobile replace-price-group"></md-text>
                 </md-row>
               </md-toolbar>
-              <md-content>
-                <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-individual-mobile"></p>
-                <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-group-mobile"></p>
-                <p md-padding class="replace-text"></p>
+              <md-content md-color="grey">
+                <md-paper class="text" md-shadow="shadow-1">
+                  <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-individual-mobile"></p>
+                  <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-group-mobile"></p>
+                  <p md-padding class="replace-text"></p>
+                </md-paper>
+                <div class="photos replace-photos"></div>
               </md-content>
             </md-layout>
           </div>
@@ -104,7 +106,10 @@
               </div>
               <div class="cushycms hidden data-price-individual" title="Precio individual de barranquismo">30&euro; individual</div>
               <div class="cushycms hidden data-price-group" title="Precio de grupo de barranquismo">25&euro; grupo</div>
-              <img class="data-image cushycms" alt="Foto de actividad: barranquismo" src="resources/barra.jpg">
+              <img class="data-image cushycms" alt="Foto de actividad: barranquismo" src="resources/actividad/barra.jpg">
+              <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos de barranquismo">barra</div>
+              <div class="cushycms hidden data-image-format" title="Formato de fotos de barranquismo">jpg</div>
+              <div class="cushycms hidden data-image-number" title="Cantidad de fotos en la carpeta de barranquismo">10</div>
               <md-toolbar md-color="black">
                 <md-row md-type="standard">
                   <md-icon md-image="icon: chevron_right"></md-icon>
@@ -125,7 +130,10 @@
 
               <div class="cushycms hidden data-price-individual" title="Precio individual de piragüismo">30&euro; individual</div>
               <div class="cushycms hidden data-price-group" title="Precio de grupo de piragüismo">25&euro; grupo</div>
-              <img class="data-image cushycms" alt="Foto de actividad: piragüismo" src="resources/pira.jpg">
+              <img class="data-image cushycms" alt="Foto de actividad: piragüismo" src="resources/actividad/pira.jpg">
+              <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos de piragüismo">barra</div>
+              <div class="cushycms hidden data-image-format" title="Formato de fotos de piragüismo">jpg</div>
+              <div class="cushycms hidden data-image-number" title="Cantidad de fotos en la carpeta de piragüismo">10</div>
               <md-toolbar md-color="black">
                 <md-row md-type="standard">
                   <md-icon md-image="icon: chevron_right"></md-icon>
@@ -141,7 +149,10 @@
                 <br /> ​Sum&eacute;rgete en cuevas, desfiladeros, gateras, salas con estalactitas y estalagmitas, lagos &nbsp;subterr&aacute;neos&hellip; que te har&aacute;n creer que est&aacute;s en otro mundo.</div>
               <div class="cushycms hidden data-price-individual" title="Precio individual de espeleología">30&euro; individual</div>
               <div class="cushycms hidden data-price-group" title="Precio de grupo de espeleología">25&euro; grupo</div>
-              <img class="data-image cushycms" alt="Foto de actividad: espeleología" src="resources/espe.jpg">
+              <img class="data-image cushycms" alt="Foto de actividad: espeleología" src="resources/actividad/espe.jpg">
+              <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos de espeleología">espeleo</div>
+              <div class="cushycms hidden data-image-format" title="Formato de fotos de espeleología">jpg</div>
+              <div class="cushycms hidden data-image-number" title="Cantidad de fotos en la carpeta de espeleología">10</div>
               <md-toolbar md-color="black">
                 <md-row md-type="standard">
                   <md-icon md-image="icon: chevron_right"></md-icon>
@@ -159,7 +170,10 @@
                 <strong>&iexcl;&iexcl;Que comience la batalla!!</strong></div>
               <div class="hidden data-price-individual"></div>
               <div class="cushycms hidden data-price-group" title="Precio de paintball">19&euro;</div>
-              <img class="data-image cushycms" alt="Foto de actividad: paintball" src="resources/paint.jpg">
+              <img class="data-image cushycms" alt="Foto de actividad: paintball" src="resources/actividad/paint.jpg">
+              <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos de paintball">barra</div>
+              <div class="cushycms hidden data-image-format" title="Formato de fotos de paintball">jpg</div>
+              <div class="cushycms hidden data-image-number" title="Cantidad de fotos en la carpeta de paintball">10</div>
               <md-toolbar md-color="black">
                 <md-row md-type="standard">
                   <md-icon md-image="icon: chevron_right"></md-icon>
@@ -191,7 +205,7 @@
       </md-page>
 
       <md-page id="conocenos-page">
-        <img title="Imagen de conócenos" class="cushycms" src="resources/conocenos-image.jpg" />
+        <img title="Imagen de conócenos" class="cushycms" src="resources/conocenos/main.jpg" />
         <div id="conocenos-section">
           <md-paper md-shadow="shadow-1">
             <div id="conocenos-text" class="cushycms" title="Texto de conócenos" md-padding>Nos encontramos en <strong>Villalba de la Sierra</strong>, el pueblo que te abre las puertas a la Serran&iacute;a Conquense, donde contamos con una larga tradici&oacute;n de vivir de los recursos naturales que nos presta este paraje, como el <strong>r&iacute;o J&uacute;car</strong>.
@@ -268,6 +282,12 @@ Deportes de aventura</b>
             map.setCenter(center);
           });
           </script>
+
+          <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos en conócenos">barra</div>
+          <div class="cushycms hidden data-image-format" title="Formato de fotos en conócenos">jpg</div>
+          <div class="cushycms hidden data-image-number" title="Cantidad de fotos en la carpeta en conócenos">10</div>
+
+          <div class="photos replace-photos"></div>
       </md-page>
 
     </md-pager>

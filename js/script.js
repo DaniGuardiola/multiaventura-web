@@ -3,22 +3,42 @@ var md = new Paperkit();
 var sliderPage = false;
 var currentActivity = false;
 
-function hashChangeListener() {
+function hashChangeListener(first) {
+  first = (first === true);
   var hash = document.location.hash;
   var parameter = 0;
   if (hash === "#packs") {
     parameter = 1;
   } else if (hash === "#conocenos") {
     parameter = 2;
+  } else if (hash === "#actividades-barranquismo" && first) {
+    setTimeout(function() {
+      document.querySelector(".activity[data-activity=\"1\"]").click();
+    }, 500);
+  } else if (hash === "#actividades-piraguismo" && first) {
+    setTimeout(function() {
+      document.querySelector(".activity[data-activity=\"2\"]").click();
+    }, 500);
+  } else if (hash === "#actividades-espeleologia" && first) {
+    setTimeout(function() {
+      document.querySelector(".activity[data-activity=\"3\"]").click();
+    }, 500);
+  } else if (hash === "#actividades-paintball" && first) {
+    setTimeout(function() {
+      document.querySelector(".activity[data-activity=\"4\"]").click();
+    }, 500);
   } else if (hash !== "#actividades" && hash !== "#" && hash !== "") {
     return;
   }
-  document.getElementById("main-tabs").moveIndicatorToTab(parameter);
-  document.getElementById("main-pager").moveToPage(parameter);
+  if (!currentActivity) {
+    document.getElementById("main-tabs").moveIndicatorToTab(parameter);
+    document.getElementById("main-pager").moveToPage(parameter);
+  } else {
+    currentActivity = false;
+  }
 }
 
 function mainTabsHandler(tab, n) {
-  console.log(n);
   if (n === 0) {
     document.location.hash = "#actividades";
   } else if (n === 1) {
@@ -28,7 +48,22 @@ function mainTabsHandler(tab, n) {
   }
 }
 
-md.initListener(hashChangeListener);
+function activityHashHandler(n) {
+  if (n === 1) {
+    document.location.hash = "#actividades-barranquismo";
+  } else if (n === 2) {
+    document.location.hash = "#actividades-piraguismo";
+  } else if (n === 3) {
+    document.location.hash = "#actividades-espeleologia";
+  } else if (n === 4) {
+    document.location.hash = "#actividades-paintball";
+  }
+
+}
+
+md.initListener(function() {
+  hashChangeListener(true);
+});
 window.addEventListener("hashchange", hashChangeListener);
 md.init();
 
@@ -45,6 +80,7 @@ function greylayerActivityClick() {
     md.greylayer.hide();
     firefoxFix();
     md.fab.show();
+    document.location.hash = "#actividades";
   });
 }
 
@@ -101,6 +137,20 @@ window.addEventListener("load", function() {
       link.removeAttribute("href");
     });
   }
+
+  var imagesFolder = document.querySelector("#conocenos-page .data-image-folder").textContent;
+  var imagesFormat = document.querySelector("#conocenos-page .data-image-format").textContent;
+  var imagesN = +document.querySelector("#conocenos-page .data-image-number").textContent;
+  var imagesNOriginal = imagesN;
+  var newImage = false;
+
+  while (imagesN > 0) {
+    newImage = document.createElement("img");
+    newImage.src = "resources/" + imagesFolder + "/" + (imagesNOriginal - imagesN + 1) + "." + imagesFormat;
+    document.querySelector("#conocenos-page .replace-photos").appendChild(newImage);
+    imagesN = imagesN - 1;
+  }
+
   var phone = document.querySelector(".data-phone").textContent;
   document.querySelector("#tlf>a").href = "tel:+34" + phone;
   document.querySelector(".replace-phone-trust").href = "tel:+34" + phone;
@@ -126,6 +176,8 @@ window.addEventListener("load", function() {
     currentActivity = event.currentTarget;
     var rect = activity.getBoundingClientRect();
     var height = isMobile() ? getViewport().height - 32 : 600;
+
+    activityHashHandler(+activity.getAttribute("data-activity"));
 
     md.greylayer.show();
     md.fab.hide();
@@ -153,7 +205,12 @@ window.addEventListener("load", function() {
     var text = currentActivity.querySelector(".data-text").innerHTML;
     var priceIndividual = currentActivity.querySelector(".data-price-individual").innerHTML;
     var priceGroup = currentActivity.querySelector(".data-price-group").innerHTML;
-    var image = currentActivity.querySelector(".data-image").src;
+    // var image = currentActivity.querySelector(".data-image").src;
+    var imagesN = +currentActivity.querySelector(".data-image-number").textContent;
+    var imagesNOriginal = imagesN;
+    var imagesFolder = currentActivity.querySelector(".data-image-folder").textContent;
+    var imagesFormat = currentActivity.querySelector(".data-image-format").textContent;
+    var newImage;
 
     container.classList.add("activity-popup");
 
@@ -164,7 +221,14 @@ window.addEventListener("load", function() {
     container.querySelector(".replace-text").innerHTML = text;
     container.querySelector(".replace-price-individual").innerHTML = container.querySelector(".replace-price-individual-mobile").innerHTML = priceIndividual;
     container.querySelector(".replace-price-group").innerHTML = container.querySelector(".replace-price-group-mobile").innerHTML = priceGroup;
-    container.querySelector(".replace-image").src = image;
+    // container.querySelector(".replace-image").src = image;
+
+    while (imagesN > 0) {
+      newImage = document.createElement("img");
+      newImage.src = "resources/" + imagesFolder + "/" + (imagesNOriginal - imagesN + 1) + "." + imagesFormat;
+      container.querySelector(".replace-photos").appendChild(newImage);
+      imagesN = imagesN - 1;
+    }
 
     md.initElement(container);
   }
