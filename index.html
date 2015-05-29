@@ -253,14 +253,22 @@ Deportes de aventura</b>
           </style>
           <script type="text/javascript">
           function initMap() {
+            var style = [{
+              featureType: "poi",
+              elementType: "labels",
+              stylers: [{
+                visibility: "off"
+              }]
+            }];
             var myOptions = {
               disableDefaultUI: true,
               disableDoubleClickZoom: true,
-              draggable: false,
+              draggable: !isMobile(),
               scrollwheel: false,
               zoom: 16,
               center: new google.maps.LatLng(40.229699, -2.0919527),
-              mapTypeId: google.maps.MapTypeId.ROADMAP
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              styles: style
             };
             map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
             marker = new google.maps.Marker({
