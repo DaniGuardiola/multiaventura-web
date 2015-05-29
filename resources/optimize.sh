@@ -6,7 +6,7 @@ mogrify -gravity north -resize 965x99999 paint/*
 mogrify -gravity north -resize 965x99999 pira/*
 
 mogrify -gravity north -resize 1400x99999 conocenos/*
-mogrify -gravity north -resize 1400x99999 -crop 99999x448^+0+0 slider/*
+mogrify -gravity north -resize 1400x99999 slider/*
 
-find . -type f -exec chmod 644 {} \;
+chmod 644 **/*
 chmod 775 optimize.sh
