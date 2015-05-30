@@ -86,11 +86,21 @@
                 </md-row>
               </md-toolbar>
               <md-content md-color="grey">
-                <md-paper class="text" md-shadow="shadow-1">
-                  <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-individual-mobile"></p>
-                  <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-group-mobile"></p>
-                  <p md-padding class="replace-text"></p>
-                </md-paper>
+                <div class="text">
+                  <md-paper md-shadow="shadow-1">
+                    <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-individual-mobile"></p>
+                    <p md-typo="display-2" class="price-mobile show-on-mobile replace-price-group-mobile"></p>
+                    <p md-padding class="replace-text"></p>
+                  </md-paper>
+                  <md-paper>
+                    <md-toolbar md-color="blue">
+                      <md-row md-type="standard">
+                        <md-icon md-image="icon: photo_camera"></md-icon>
+                        <md-text style="overflow: hidden; text-overflow: ellipsis; flex-shrink: 1;">Reportaje fotográfico incluido</md-text>
+                      </md-row>
+                    </md-toolbar>
+                  </md-paper>
+                </div>
                 <div class="photos replace-photos"></div>
               </md-content>
             </md-layout>
@@ -265,6 +275,8 @@ Deportes de aventura</b>
               disableDoubleClickZoom: true,
               draggable: !isMobile(),
               scrollwheel: false,
+              mapTypeControl: true,
+              streetViewControl: true,
               zoom: 16,
               center: new google.maps.LatLng(40.229699, -2.0919527),
               mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -291,7 +303,7 @@ Deportes de aventura</b>
           });
           </script>
 
-          <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos en conócenos">barra</div>
+          <div class="cushycms hidden data-image-folder" title="Nombre de la carpeta de fotos en conócenos">conocenos</div>
           <div class="cushycms hidden data-image-format" title="Formato de fotos en conócenos">jpg</div>
           <div class="cushycms hidden data-image-number" title="Cantidad de fotos en la carpeta en conócenos">10</div>
 
