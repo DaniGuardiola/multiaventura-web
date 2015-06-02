@@ -224,7 +224,39 @@ md-sidemenu .logo {
   padding-right: 16px;
 }
 
+.packs-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.packs-page .packs {
+  margin-top: 64px;
+  border-radius: 2px;
+}
+
+.packs-page .packs md-text {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.packs-page img.bg {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 @media only screen and (min-width: 768px) {
+  .packs-page img.bg {
+    width: 100%;
+    top: 50%;
+    height: auto;
+    left: 0;
+    transform: translate(0, -50%);
+  }
   #md-morph.activity-popup md-toolbar md-text.hide-on-mobile {
     display: block;
   }
